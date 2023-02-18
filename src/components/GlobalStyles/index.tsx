@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import { createGlobalStyle } from 'styled-components';
+import 'normalize.css';
 
 const GlobalStyle = createGlobalStyle`
- @import "normalize.css";
 
 * {
 	margin: 0;
@@ -21,13 +21,20 @@ body {
 	text-rendering: optimizespeed;
     color: black;
 }
+button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #121212;
         color: white;
     }
-}
+} 
 `;
 type Props = {
 	children: ReactNode;
